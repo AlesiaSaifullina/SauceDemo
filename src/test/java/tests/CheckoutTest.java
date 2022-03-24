@@ -1,16 +1,21 @@
+package tests;
+
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class CheckoutTest extends BaseTest {
 
+    String link = "https://www.saucedemo.com";
+    String user = "standard_user";
+
     @Test
     public void checkout() {
         String productLocator =
                 "//div[text()='%s']/ancestor::div[@class='inventory_item']//button[text()='Add to cart']";
 
-        driver.get("https://www.saucedemo.com");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.get(link);
+        driver.findElement(By.id("user-name")).sendKeys(user);
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("user-name")).submit();
         driver.findElement(By.xpath(String.format(productLocator, "Sauce Labs Backpack"))).click();
