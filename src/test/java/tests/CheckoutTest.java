@@ -6,7 +6,7 @@ import static org.testng.Assert.assertEquals;
 
 public class CheckoutTest extends BaseTest {
 
-    @Test
+    @Test(description = "Проверка функциональности покупки товара", retryAnalyzer = Retry.class)
     public void checkout() {
         loginPage.open();
         loginPage.login(USER, PASSWORD);

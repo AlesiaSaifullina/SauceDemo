@@ -22,4 +22,6 @@ public class NavigationPage extends BasePage {
     public String getProductsInCart() {
         return driver.findElement(CART_LINK).getText();
     }
+
+
 }

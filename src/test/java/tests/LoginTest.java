@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 
 public class LoginTest extends BaseTest {
 
-    @DataProvider(name = "Входящие данные для негативных тестов на логин")
+    @DataProvider(name = "Входящие данные для негативных тестов на логин") //удалить ненужные тесты ниже
     public Object[][] loginData() {
         return new Object[][]{
                 {"test", "", "Epic sadface: Password is required"},
