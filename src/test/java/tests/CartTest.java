@@ -2,6 +2,8 @@ package tests;
 
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
+
 public class CartTest extends BaseTest {
 
     @Test
@@ -12,10 +14,7 @@ public class CartTest extends BaseTest {
         productsPage.addToCart("Sauce Labs Bike Light");
         productsPage.addToCart("Sauce Labs Bolt T-Shirt");
         productsPage.removeFromCart("Sauce Labs Backpack");
-        //navigationPage.clickCart();
-       // assertEquals(cartPage.getProductCount(), 2);
+        cartPage.clickCart();
+        assertEquals(cartPage.getProductCount(), 2);
     }
-        //cartPage.open();
-        //assertEquals(cartPage.getProductPrice("Sauce Labs Backpack"), "$9.99");
-        //cartPage.getProductPrice();
-    }
+}

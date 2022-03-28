@@ -46,6 +46,7 @@ public class CartPage extends BasePage{
         driver.findElement(FIRST_NAME_INPUT).sendKeys(firstName);
         driver.findElement(LAST_NAME_INPUT).sendKeys(lastName);
         driver.findElement(ZIP_CODE_INPUT).sendKeys(zipCode);
+        driver.findElement(CONTINUE_BUTTON).click();
     }
 
     public String getTotalPrice() {
@@ -57,8 +58,8 @@ public class CartPage extends BasePage{
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Products']")));
     }
 
-    public void getCompleteTitle() {
-        driver.findElement(COMPLETE_INFO);
+    public String getCompleteTitle() {
+       return driver.findElement(COMPLETE_INFO).getText();
     }
 
     public int getProductCount() {

@@ -14,9 +14,8 @@ public class CheckoutTest extends BaseTest {
         cartPage.clickCart();
         cartPage.checkout();
         cartPage.fillInCheckoutInfo("Alesia", "Saifullina", "220085");
-        cartPage.continueShopping();
         assertEquals(cartPage.getTotalPrice(), "$32.39");
         cartPage.finish();
-
+        assertEquals(cartPage.getCompleteTitle(),"CHECKOUT: COMPLETE!");
     }
 }
