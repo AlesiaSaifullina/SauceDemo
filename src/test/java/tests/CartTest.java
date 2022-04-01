@@ -14,7 +14,7 @@ public class CartTest extends BaseTest {
         productsPage.addToCart("Sauce Labs Bike Light");
         productsPage.addToCart("Sauce Labs Bolt T-Shirt");
         productsPage.removeFromCart("Sauce Labs Backpack");
-        cartPage.clickCart();
+        navigationPage.clickCart();
         assertEquals(cartPage.getProductCount(), 2);
     }
 
