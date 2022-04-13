@@ -32,8 +32,8 @@ import java.util.concurrent.TimeUnit;
         @BeforeMethod
         public void setup(ITestContext testContext) {
             WebDriverManager.chromedriver().setup();
-            ChromeOptions options =new ChromeOptions();
-            options.addArguments("--headless");
+            ChromeOptions options = new ChromeOptions();
+            options.setHeadless(true);
             driver = new ChromeDriver(options);
             testContext.setAttribute("driver", driver);
             driver.manage().window().maximize();
