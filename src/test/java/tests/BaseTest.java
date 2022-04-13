@@ -45,8 +45,10 @@ import java.util.concurrent.TimeUnit;
             basePage = new BasePage(driver);
         }
 
-        @AfterMethod(alwaysRun = true)
+        @AfterMethod(alwaysRun = true, description = "Closing Browser")
         public void close() {
+            if(driver != null){
             driver.quit();
+            }
         }
-    }
+ }
