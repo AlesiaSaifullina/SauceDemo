@@ -43,6 +43,7 @@ import java.util.concurrent.TimeUnit;
             productsPage = new ProductsPage(driver);
             cartPage = new CartPage(driver);
             basePage = new BasePage(driver);
+            navigationPage = new NavigationPage(driver);
         }
 
         @AfterMethod(alwaysRun = true, description = "Closing Browser")
